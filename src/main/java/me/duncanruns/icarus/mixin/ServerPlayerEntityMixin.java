@@ -41,7 +41,11 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity {
             ItemStack rockets = itemStackFromString(String.format("minecraft:firework_rocket{Fireworks:{Flight:%db}}", IcarusConfig.flightDuration), 64);
 
             inventory.armor.set(EquipmentSlot.CHEST.getEntitySlotId(), wings);
-            inventory.main.set(inventory.getEmptySlot(), rockets);
+            if (!IcarusConfig.offhand) {
+                inventory.main.set(inventory.getEmptySlot(), rockets);
+            } else {
+                inventory.offHand.set(0, rockets);
+            }
         }
     }
 }

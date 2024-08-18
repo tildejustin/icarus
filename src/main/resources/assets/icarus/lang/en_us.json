@@ -1,4 +1,6 @@
 {
   "speedrunapi.config.icarus.option.flightDuration": "Flight Duration",
-  "speedrunapi.config.icarus.option.flightDuration.description": "The flight duration of the provided rockets."
+  "speedrunapi.config.icarus.option.flightDuration.description": "The flight duration of the provided rockets.",
+  "speedrunapi.config.icarus.option.offhand": "Offhand Rockets",
+  "speedrunapi.config.icarus.option.offhand.description": "Determines whether the rockets should be put in the main hand or offhand."
 }
