@@ -1,0 +1,4 @@
+{
+  "speedrunapi.config.icarus.option.flightDuration": "Flight Duration",
+  "speedrunapi.config.icarus.option.flightDuration.description": "The flight duration of the provided rockets."
+}

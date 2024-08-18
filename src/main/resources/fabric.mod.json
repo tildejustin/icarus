@@ -1,32 +1,41 @@
 {
-    "schemaVersion": 1,
-    "id": "icarus",
-    "version": "${version}",
-    "name": "Icarus",
-    "description": "Icarus Mod based off of jojoe's datapack. This mod's usage is allowed for submissions to speedrun.com/mc_icarus.",
-    "authors": [
-        "DuncanRuns"
-    ],
-    "contributors": [],
-    "contact": {
-        "homepage": "https://www.speedrun.com/mc_icarus/",
-        "sources": "https://github.com/DuncanRuns/Icarus-Mod/",
-        "issues": "https://github.com/DuncanRuns/Icarus-Mod/issues"
-    },
-    "license": "MIT",
-    "icon": "assets/icarus/icon.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-            "me.duncanruns.icarus.Icarus"
-        ],
-        "client": [],
-        "server": []
-    },
-    "mixins": [
-        "icarus.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=0.10.7"
+  "schemaVersion": 1,
+  "id": "icarus",
+  "version": "${version}",
+  "name": "Icarus",
+  "description": "Icarus Mod based off of jojoe's datapack. This mod's usage is allowed for submissions to speedrun.com/mc_icarus.",
+  "authors": [
+    {
+      "name": "DuncanRuns",
+      "contact": {
+        "homepage": "https://github.com/DuncanRuns"
+      }
     }
+  ],
+  "contributors": [
+    "tildejustin"
+  ],
+  "contact": {
+    "homepage": "https://www.speedrun.com/mc_icarus/",
+    "sources": "https://github.com/DuncanRuns/Icarus-Mod/",
+    "issues": "https://github.com/DuncanRuns/Icarus-Mod/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/icarus/icon.png",
+  "environment": "*",
+  "mixins": [
+    "icarus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15",
+    "speedrunapi": "*"
+  },
+  "breaks": {
+    "worldpreview": "<=6.0.0"
+  },
+  "custom": {
+    "speedrunapi": {
+      "config": "me.duncanruns.icarus.IcarusConfig"
+    }
+  }
 }
