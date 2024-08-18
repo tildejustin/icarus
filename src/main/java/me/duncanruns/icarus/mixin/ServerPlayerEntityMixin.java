@@ -6,6 +6,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import me.duncanruns.icarus.IcarusConfig;
 import me.duncanruns.icarus.compat.WorldPreviewCompat;
 import net.minecraft.command.arguments.ItemStackArgumentType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -39,8 +40,8 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity {
             ItemStack wings = itemStackFromString("minecraft:elytra{Unbreakable:1b}", 1);
             ItemStack rockets = itemStackFromString(String.format("minecraft:firework_rocket{Fireworks:{Flight:%db}}", IcarusConfig.flightDuration), 64);
 
-            inventory.armor.set(2, wings);
-            inventory.main.set(0, rockets);
+            inventory.armor.set(EquipmentSlot.CHEST.getEntitySlotId(), wings);
+            inventory.main.set(inventory.getEmptySlot(), rockets);
         }
     }
 }
